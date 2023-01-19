@@ -31,7 +31,7 @@ $rows_tipos = $lista_tipos->fetch_all();
                 
                 </button>
                 <a href="index.php" class="navbar-bra"></a>
-                    <img width="8 0px" src="images/logo.png" alt="logo ">
+                    <img width="80px" src="images/logo.png" alt="logo ">
             </div>
             
             <!-- fecha agrupamento mobile  -->
