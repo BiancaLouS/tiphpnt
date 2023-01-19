@@ -3,7 +3,8 @@
 @charset "utf8";
 
 .fundofixo{
-    background: url(../images/churrascaria.jpg) no-repeat fixed;
+    background: url(../images/churrascaria.jpg) no-repeat top fixed;
     -webkit-background-size:cover;
     background-size: cover;
+    
 }

@@ -1,1 +1,3 @@
-<?php ?>
+<?php 
+include "conn/connect.php"
+?>
