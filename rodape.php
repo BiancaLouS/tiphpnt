@@ -50,6 +50,9 @@
         
         <!-- Final da Area de Localização  -->
 
+        
+        <!-- Inicio do Mapa do Site  -->
+
         <div class="col-sm-6 col-md-4">
             <div class="panel-footer">
                 <h4>Links</h4>
@@ -89,6 +92,64 @@
             </div>
         </div>
 
+         <!-- Final do Mapa do Site  -->
+
+         <!-- Inicio Area de Contato  -->
+
+        <div class="col-sm-6 col-md-4">
+            <div class="panel-footer" background: none;>
+                    <h4>Contato</h4>
+                    <form action="rodape_contato_envia.php" name="form_contato" id="form_contato" method="post">
+                        <p>
+                            <span class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </span>
+                                    <input type="text" name="nome_contato" placeholder="Digite seu Nome" aria-describedby="basic-addon1" class="form-control" required>
+                                
+                            </span>
+                        </p>
+
+                        <p>
+                            <span class="input-group">
+                                <span class="input-group-addon" id="basic-addon2">
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                    <input type="text" name="nome_contato" placeholder="Digite seu E-mail" aria-describedby="basic-addon2" class="form-control" required>
+                            </span>
+                        </p>
+
+                        <p>
+                            <span class="input-group">
+                                <span class="input-group-addon" id="basic-addon3">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </span>
+                                    <textarea type="text" name="nome_contato" cols="30" rows="5" placeholder="Digite seu Comentário" aria-describedby="basic-addon3" class="form-control" required> </textarea></span> 
+                            </span>
+                        </p>
+                        
+                        <p>
+                            <button class="btn btn-danger btn-block" aria-label="Enviar" role="button">
+                               Enviar
+                               <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                            </button>
+                        </p>
+
+                    </form>
+            </div>
+           
+            <!-- Final Area de Contato  -->
+            
+        </div>
+        <div class="col-sm-12">
+            <div class="panel-footer" style="background: none;">
+                <h6 class="text-danger text-center">
+                    Desenvolvido por JD Construtora&trade; 2023
+                    <br>
+                    <a href="https://jdconstrutor.netlify.app/" target="_blank">jdconstrutor.netlify.app</a> 
+                </h6>
+            </div>
+        </div>
     </div>
     
 </body>
