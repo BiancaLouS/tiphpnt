@@ -92,8 +92,9 @@ $rows_tipos = $lista_tipos->fetch_all();
                         <!-- Fim do Formulário de Busca  -->
 
                     <li class="active">
-                        <a href="admin/index.php"></a>
-                        <span class="glyphicon glyphicon-user">&nbsp; Admin|Cliente</span>
+                        <a href="admin/index.php">
+                            <span class="glyphicon glyphicon-user">&nbsp;Admin|Cliente</span>
+                        </a>
                     </li>
                 </ul>
             </div>
