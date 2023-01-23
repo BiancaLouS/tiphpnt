@@ -33,7 +33,7 @@
     <!-- rodapé -->
 
     <footer class="panel-footer" style="background: none;">
-    <?php include 'rodape.php';?>
+        <?php include 'rodape.php';?>
     </footer>
     
     </main>
