@@ -17,7 +17,7 @@ $rows_tipos = $lista_tipos->fetch_all();
 
     <!-- abre a barra de navegação -->
 
-    <nav class="fixed navbar fixed-top navbar-light navbar-inverse bg-light">
+    <nav class="fixed navbar navbar-fixed-top navbar-light navbar-inverse bg-light">
         <div class="container-fluid">
 
             <!-- agrupamento mobile  -->
@@ -30,8 +30,9 @@ $rows_tipos = $lista_tipos->fetch_all();
                     <span class="icon-bar"></span>
                 
                 </button>
-                <a href="index.php" class="navbar-bra"></a>
+                <a href="index.php" class="navbar-bra">
                     <img width="80px" src="images/logo.png" alt="logo ">
+                </a>
             </div>
             
             <!-- fecha agrupamento mobile  -->
