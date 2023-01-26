@@ -4,8 +4,6 @@
     $row_destaque = $lista->fetch_assoc();
     $num_linhas = $lista->num_rows;
 
-
-
 ?>
 
 <!DOCTYPE html>
