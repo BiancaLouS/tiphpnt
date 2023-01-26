@@ -13,7 +13,7 @@ $rows_tipos = $lista_tipos->fetch_all();
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Menu Público</title>
 </head>
-<body>
+<body class="fundofixo">
 
     <!-- abre a barra de navegação -->
 

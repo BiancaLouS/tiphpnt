@@ -1,7 +1,7 @@
 <?php 
     include "conn/connect.php";
     $busca = $_GET['buscar'];
-    $lista = $conn->query("select * from vw_tbprodutos where descri_produto like '%busca%'");
+    $lista = $conn->query("select * from vw_tbprodutos where descri_produto like '%$busca%'");
     $row_produto = $lista->fetch_assoc();
     $num_linhas = $lista->num_rows;
 ?>
@@ -12,8 +12,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/estilo.css">
+
         <title>Busca</title>
     </head>
 <body>
@@ -41,7 +43,7 @@
 
                         </span>
                     </a>    
-                    <strong>Produtos em Geral</strong>
+                    <strong>Produtos Disponíveis</strong>
                 </h2>
 
                 <div class="row">
