@@ -1,5 +1,7 @@
 <?php 
     include "conn/connect.php";
+    $busca = $_GET['buscar'];
+    $lista = $conn->query('select * from vw_tbprodutos where descri_produto like "%busca%"')
 ?>
 
 <!DOCTYPE html>
