@@ -1,5 +1,15 @@
 <?php 
+    include '../conn/connect.php';
     
+    // Iniciar a verificação do login
+
+    if($_POST){
+        $login = $_POST['login_usuario'];
+        $senha = md5($_POST['senha_usuario']);
+        $loginRes = $conn->query("select * from tbusuarios where login_usuario = '$login' and senha_usuario = md5('$senha')");
+    }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +17,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="10;URL=../index.php">
+    <meta http-equiv="refresh" content="30;URL=../index.php">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/2495680ceb.js" crossorigin="anonymous"></script>
@@ -52,7 +62,7 @@
                                 <p class="text-center">
                                     <small>
                                         <br>
-                                        Caso não faça uma escolha em 15 segundos será redirecionado automaticamente para página inicial.
+                                        Caso não faça uma escolha em 30 segundos será redirecionado automaticamente para página inicial.
                                     </small>
                                 </p>
                             </div><!-- fecha alert -->
