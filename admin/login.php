@@ -29,6 +29,8 @@
             else{
                 echo "<script> window.open('../cliente/index.php?cliente=".$login."', '_self') </script>";
             }
+        } else{
+            echo "<script> window.open('invasor.php', '_self') </script>";
         }
     }
                    
