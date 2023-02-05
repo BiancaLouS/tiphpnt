@@ -6,8 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
+
     <title>Chuleta Quente Churrascaria</title>
 </head>
 <body class="fundofixo">
@@ -24,31 +26,19 @@
             <img src="images/marca/churrascaria.jpg" class="img-responsive img-rounded"> 
     </div>
 
-    <!-- Carousel Início -->
+        <!-- area de carrosel -->
+        <?php include 'carousel.php';?>
 
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="images/marca/Banner1.jpg" alt="Primeiro Slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="images/marca/Banner2.jpg" alt="Segundo Slide">
-            </div>
-           
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
-    </div>
-
-    <!-- Carousel Fim -->
-    
+        <!-- area de destaque -->
+        <a neme="destaques">&nbsp;</a>
+        <?php include 'produtos_destaque.php';?>
+       
+       
+        <!-- area geral de produtos -->
+        <a name="produtos">&nbsp;</a>
+        <?php include 'produtos_geral.php';?>
+       
     <!-- rodapé -->
 
     <footer class="panel-footer" style="background: none;">
