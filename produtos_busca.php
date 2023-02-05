@@ -39,9 +39,7 @@
 
                 <h2 class="breadcrumb alert-danger">  
                     <a href="javascript:window.history.go(-1)" class="btn btn-danger">
-                        <span class="glyphicon glyphicon-chevron-left">
-
-                        </span>
+                        <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>    
                     <strong>Produtos Disponíveis</strong>
                 </h2>
