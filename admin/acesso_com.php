@@ -11,7 +11,7 @@
 
     // Verificar se o usuário esta logado na sessão 
 
-    if(!isset($_SESSION['login_user'])){ // Se não existir sessão definida para esse cara, redirecionamos a sessão por Segurança
+    if(!isset($_SESSION['login_usuario'])){ // Se não existir sessão definida para esse cara, redirecionamos a sessão por Segurança
         header('location: login.php');
         exit;
     }
