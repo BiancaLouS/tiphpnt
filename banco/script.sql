@@ -105,3 +105,21 @@ CREATE VIEW vw_tbprodutos AS
 		JOIN tbtipos t
 	WHERE p.id_tipo_produto=t.id_tipo;
 COMMIT;
+
+insert into tbtipos (id_tipo, sigla_tipo, rotulo_tipo) values ('3', 'beb', 'Bebida');
+
+insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_produto, valor_produto, imagem_produto, destaque_produto) values ('10', '2', 'Mousse de Chocolate', 'Delicioso mousse de chocolate, cremoso que derrete na boca', '29.90', 'mousse_choco.jpg', 'Não');
+
+insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_produto, valor_produto, imagem_produto, destaque_produto) values ('11', '2', 'Pudim de Leite', 'Pudim de Leite com aquele gostinho caseiro, feito com os melhores ingredientes para fechar o seu churrasco.', '29.90', 'pudim.jpg', 'Sim');
+
+insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_produto, valor_produto, imagem_produto, destaque_produto) values ('12', '2', 'Torta Gateau', 'Surpreendente torta sem farinha feito com aquele blend de chocolate exclusivo que derrete na boca', '29.90', 'torta_gateau.jpg', 'Não');
+
+insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_produto, valor_produto, imagem_produto, destaque_produto) values ('13', '3', 'Caipirinha', 'Capirinha gelada para refrescar seu dia', '29.90', 'caipirinha.webp', 'Não');
+
+insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_produto, valor_produto, imagem_produto, destaque_produto) values ('14', '3', 'Negroni', 'Coquetel feito de uma parte de gim, uma parte de vermute rosso (vermelho, semidoce), e uma parte de Campari, enfeitado com casca de laranja.', '29.90', 'negroni.jpeg', 'Não');
+
+insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_produto, valor_produto, imagem_produto, destaque_produto) values ('15', '3', 'Sangria', 'É Um drink de Uva,Tangerina, Champagne e Vinho Moscato,com uma leve refrescancia.', '29.90', 'sangria.jpg', 'Não');
+
+insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_produto, valor_produto, imagem_produto, destaque_produto) values ('16', '3', 'Guaraná (Lata)', 'Clássico guaraná lata com opções de tomar com larança ou sem perfeito para aquele churrasco', '29.90', 'refrigerante.jpg', 'Sim');
+
+insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_produto, valor_produto, imagem_produto, destaque_produto) values ('17', '3', 'Chopp', 'Um Chopp para distrair... acompanhamento perfeito para comer os destaques da casa.', '29.90', 'chopp.webp', 'Sim');
