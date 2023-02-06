@@ -23,7 +23,7 @@
     </h2>
 
     <div class="thumbnail">
-            <img src="images/marca/churrascaria.jpg" class="img-responsive img-rounded"> 
+            <img src="images/churrascaria.jpg" class="img-responsive img-rounded"> 
     </div>
 
         <!-- area de carrosel -->
