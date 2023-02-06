@@ -31,7 +31,7 @@ $rows_tipos = $lista_tipos->fetch_all();
                 
                 </button>
                 <a href="index.php" class="navbar-bra">
-                    <img width="80px" src="../images/logo.png" alt="logo">
+                    <img width="80px" src="images/logo.png" alt="logo">
                 </a>
             </div>
             

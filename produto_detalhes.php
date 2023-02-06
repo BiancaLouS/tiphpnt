@@ -32,7 +32,7 @@ $row_detalhe = $produto_detalhe->fetch_assoc();
             <div class="row g-0">
                 <!-- imagem do produto -->
                 <div class="col-md-7">
-                    <img src="../images/<?php echo $row_detalhe['imagem_produto'] ?>" class="img-fluid img-thumbnail rounded-start" alt="imagem da churrascaria chuleta quente">
+                    <img src="images/<?php echo $row_detalhe['imagem_produto'] ?>" class="img-fluid img-thumbnail rounded-start" alt="imagem da churrascaria chuleta quente">
                 </div>
                 <!-- descrição do produto -->
                 <div class="col-md-5">
