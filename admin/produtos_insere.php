@@ -136,9 +136,9 @@
                                     </div>
                                     <label for="valor_produto">Inserir Imagem:</label>
                                     <div class="input-group">
-                                    <span>
-                                        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
-                                    </span>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                                        </span>
                                     <img src="" alt="" name="imagem" id="imagem" class="img-responsive">
                                     <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="image/*">
                                     </div>
