@@ -77,7 +77,7 @@
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>   
                     </a>                
-                     Adicione um Novo Produto
+                     Alterar Produtos
                 </h2>
                   
                         <!-- Inserindo Produtos  -->
@@ -86,7 +86,7 @@
                     <div class="thumbnail">
                         <div class="alert alert-danger" role="alert">
                             
-                            <form action="produtos_insere.php" method="post" name="form_produto_insere" enctype="multipart/form-data" id="form_produto_insere">
+                            <form action="produtos_atualiza.php" method="post" name="form_produto_insere" enctype="multipart/form-data" id="form_produto_insere">
                                     
                                 <label for="id_tipo_produto">Tipo:</label>
                                     
@@ -107,10 +107,10 @@
                                     <label for="destaque_produto">Destaque:</label>
                                     <div class="input-group">
                                         <label for="destaque_produtos_s" class="radio-inline">
-                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Sim">Sim
+                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Sim" <?php echo $row['destaque_produto']=="Sim"?"checked":null ?>>Sim
                                         </label>
                                         <label for="destaque_produtos_s" class="radio-inline">
-                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Não" checked>Não
+                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Não" <?php echo $row['destaque_produto']=="Não"?"checked":null ?>>Não
                                         </label>
                                     </div>
                                         
