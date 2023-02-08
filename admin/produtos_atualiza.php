@@ -150,10 +150,10 @@
 
                                     </div>
 
-                                    <label for="valor_produto">Imagem Atual:</label>
+                                    <label for="imagem_produto_atual">Imagem Atual:</label>
+                                    <img src="../images/" <?php echo $row['imagem_produto'];?> alt="" srcset="">
 
-
-                                    <label for="valor_produto">Inserir Imagem:</label>
+                                    <label for="imagem_produto">Imagem Nova:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>

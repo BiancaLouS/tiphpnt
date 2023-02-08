@@ -134,7 +134,7 @@
                                                 required required min="0" step="0.01">
 
                                     </div>
-                                    <label for="valor_produto">Inserir Imagem:</label>
+                                    <label for="imagem_produto">Inserir Imagem:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
