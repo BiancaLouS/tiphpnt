@@ -20,8 +20,8 @@
 <body> 
     <?php include "menu_adm.php"; ?>
     <main class="container">
-        <h2 class="breadcrumb alert-danger" >Lista de Produtos </h2>
-        <table class="table table-hover table-condensed tb-opacidade"> 
+        <h2 class="breadcrumb alert-danger" >Lista de Produtos</h2>
+        <table class="table table-hover table-condensed tb-opacidade alert-warning"> 
             <thead>
                 <th class="hidden">ID</th>
                 <th>TIPO</th>
