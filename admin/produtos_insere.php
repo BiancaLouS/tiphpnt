@@ -54,20 +54,19 @@
         <title>Produto Insere</title>
     </head>
 
-    <body>
+    <body class="fundofixo">
         <?php include "menu_adm.php";?>
         <main class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-8">
-                    <h2 class="breadcrumb text-danger">
-                        <a href="produtos_lista.php">
-                            <button class="btn btn-danger">
-                                <span class="glyphicon glyphicon-chevron-left">
-
-                                </span>
-                            </button>
-                        </a>
-
+                <h2 class="breadcrumb alert-danger">
+                    <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>   
+                    </a>                
+                     Adicione um Novo Produto
+                </h2>
+                  
                         <!-- Inserindo Produtos  -->
 
                     </h2>
