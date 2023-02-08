@@ -144,7 +144,7 @@
                                     </div>
                                     <br>
                                     <hr>
-                                    <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="cadastrar">
+                                    <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="Cadastrar">
                             </form>
                         </div>
                     </div>

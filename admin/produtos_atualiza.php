@@ -109,10 +109,10 @@
                                     <label for="destaque_produto">Destaque:</label>
                                     <div class="input-group">
                                         <label for="destaque_produtos_s" class="radio-inline">
-                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Sim">Sim
+                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Sim" <?php echo $row['destaque_produto']=="Sim"?"checked":null ?>>Sim
                                         </label>
                                         <label for="destaque_produtos_s" class="radio-inline">
-                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Não" checked>Não
+                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Não" <?php echo $row['destaque_produto']=="Não"?"checked":null ?>>Não
                                         </label>
                                     </div>
                                         
@@ -123,7 +123,7 @@
                                         </span>
                                         <input type="text" name="descri_produto" id="descri_produto"
                                                 class="form-control" placeholder="Digite a descrição do Produto"
-                                                maxlength="100" required>
+                                                maxlength="100" value="<?php echo $row['descri_produto'];?>">
                                         
                                     </div>
 
@@ -136,7 +136,7 @@
                                         <textarea name="resumo_produto" id="resumo_produto"
                                                 cols="30" rows="8" 
                                                 class="form-control" placeholder="Digite os detalhes do Produto"
-                                                required></textarea>
+                                                required><?php echo $row['resumo_produto'];?></textarea>
                                     </div>
 
                                     <label for="valor_produto">Valor do Produto:</label>
@@ -146,9 +146,13 @@
                                         </span>
                                         <input type="number" name="valor_produto" id="valor_produto"
                                                 class="form-control" placeholder="Digite o valor do Produto"
-                                                required required min="0" step="0.01">
+                                                required required min="0" step="0.01" value="<?php echo $row['valor_produto'];?>">
 
                                     </div>
+
+                                    <label for="valor_produto">Imagem Atual:</label>
+
+
                                     <label for="valor_produto">Inserir Imagem:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
@@ -159,7 +163,7 @@
                                     </div>
                                     <br>
                                     <hr>
-                                    <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="cadastrar">
+                                    <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="Atualizar">
                             </form>
                         </div>
                     </div>
