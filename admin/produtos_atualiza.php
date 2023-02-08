@@ -86,7 +86,9 @@
                     <div class="thumbnail">
                         <div class="alert alert-danger" role="alert">
                             
-                            <form action="produtos_atualiza.php" method="post" name="form_produto_insere" enctype="multipart/form-data" id="form_produto_insere">
+                            <form action="produtos_atualiza.php" method="post" name="form_produto_atualiza" enctype="multipart/form-data" id="form_produto_atualiza">
+
+                            <input type="hidden" name="id_produto" id="id_produto" value="<?php echo $row['id_produto']; ?>">
                                     
                                 <label for="id_tipo_produto">Tipo:</label>
                                     
@@ -97,8 +99,15 @@
                                         <select name="id_tipo_produto" id="id_tipo_produto" class="form-control" required>
                                             <?php do{ ?>
                                             
-                                            <option value="<?php echo $row_fk['id_tipo']?>">
+                                            <option value="<?php echo $row_fk['id_tipo']; ?>">
+                                                <?php 
+                                                    if (!(strcmp($row_fk['id_tipo'],$row['id_tipo_produto']))){
+                                                        echo "selected=\"selected\"";
+                                                    }
+                                                ?>
+
                                                 <?php echo $row_fk['rotulo_tipo']?>
+
                                             </option>
                                             
                                             <?php }while($row_fk=$lista_fk->fetch_assoc()); ?>
@@ -121,7 +130,7 @@
                                         </span>
                                         <input type="text" name="descri_produto" id="descri_produto"
                                                 class="form-control" placeholder="Digite a descrição do Produto"
-                                                maxlength="100" required>
+                                                maxlength="100" value="<?php echo $row['descri_produto'];?>">
                                         
                                     </div>
 
@@ -134,7 +143,7 @@
                                         <textarea name="resumo_produto" id="resumo_produto"
                                                 cols="30" rows="8" 
                                                 class="form-control" placeholder="Digite os detalhes do Produto"
-                                                required></textarea>
+                                                ><?php echo $row['resumo_produto'];?></textarea>
                                     </div>
 
                                     <label for="valor_produto">Valor do Produto:</label>
@@ -144,10 +153,14 @@
                                         </span>
                                         <input type="number" name="valor_produto" id="valor_produto"
                                                 class="form-control" placeholder="Digite o valor do Produto"
-                                                required required min="0" step="0.01">
+                                                required required min="0" step="0.01" value="<?php echo $row['valor_produto'];?>">
+
+                                    <label for="imagem_produto_atual">Imagem Atual:</label>
+                                    <img src="../images/" <?php echo $row['imagem_produto']; ?> alt="">
+                                    <input type="hidden" name="imagem_produto_atual" id="imagem_produto_atual" value="<?php echo $row['valor_produto'];?>">
 
                                     </div>
-                                    <label for="valor_produto"></label>
+                                    <label for="imagem_produto">Imagem Nova:</label>
                                     <div class="input-group">
                                     <span>
                                         <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
