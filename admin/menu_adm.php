@@ -11,6 +11,8 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet">
     -->
     <!-- Link para CSS específico -->
+
+    <link rel="stylesheet" href="../css/estilo2.css">
     
 </head>
 <body>
@@ -25,7 +27,7 @@
             <span class="icon-bar"></span>
         </button>
         <a href="index.php" class="navbar-brand">
-            <img src="../imagens/logochurrascopequeno.png" alt="">
+            <img width="80px" src="../images/logo.png" alt="logo" class="logo">
         </a>
     </div>
     <!-- Fecha Agrupamento para exibição Mobile -->

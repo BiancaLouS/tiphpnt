@@ -1,7 +1,7 @@
 <?php 
     include 'acesso_com.php';
     include '../conn/connect.php';
-    $lista = $conn->query("select * from vw_tbprodutos order by desc");
+    $lista = $conn->query("select * from vw_tbprodutos");
     $row = $lista->fetch_assoc();
     $rows = $lista->num_rows;
 ?>
@@ -15,9 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Lista</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/estilo2.css">
 </head>
-<body class="fundofixo"> 
+<body> 
     <?php include "menu_adm.php"; ?>
     <main class="container">
         <h2 class="breadcrumb alert-danger" >Lista de Produtos </h2>
