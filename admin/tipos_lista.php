@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos - Lista</title>
+    <title>Tipos - Lista</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilo2.css">
 </head>
@@ -25,7 +25,7 @@
                 <th>SIGLA</th>
                 <th>ROTULO</th>
                  <th>
-                    <a href="produtos_insere.php" target="_self" class="btn btn-block btn-primary btn-xs" role="button">
+                    <a href="tipos_insere.php" target="_self" class="btn btn-block btn-primary btn-xs" role="button">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                         <span class="hidden-xs">ADICIONAR</span>
                     </a>
@@ -97,12 +97,11 @@
 <script src="../js/bootstrap.min.js"></script>
 <script type="text/javascript">
     $('.delete').on('click',function(){
-        var nome = $(this).data('nome'); //busca o nome com a descrição (data-nome)
-        var id = $(this).data('id'); // busca o id (data-id)
-        //console.log(id + ' - ' + nome); //exibe no console
-        $('span.nome').text(nome); // insere o nome do item na confirmação
-        $('a.delete-yes').attr('href','produtos_excluir.php?id_produto='+id); //chama o arquivo php para excluir o produto
-        $('#modalEdit').modal('show'); // chamar o modal
+        var nome = $(this).data('nome'); 
+        var id = $(this).data('id');         
+        $('span.nome').text(nome); 
+        $('a.delete-yes').attr('href','tipos_excluir.php?id_tipo='+id); 
+        $('#modalEdit').modal('show'); 
     });
 </script>
 
