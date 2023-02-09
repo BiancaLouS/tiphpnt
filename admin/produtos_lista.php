@@ -20,8 +20,8 @@
 <body> 
     <?php include "menu_adm.php"; ?>
     <main class="container">
-        <h2 class="breadcrumb alert-danger" >Lista de Produtos</h2>
-        <table class="table table-hover table-condensed tb-opacidade alert-warning"> 
+        <h2 class="breadcrumb alert-danger center" >Lista de Produtos</h2>
+        <table class="table table-hover table-condensed tb-opacidade alert-warning">
             <thead>
                 <th class="hidden">ID</th>
                 <th>TIPO</th>
@@ -36,11 +36,11 @@
                     </a>
                 </th>
             </thead>
-            
+
             <tbody> <!-- início corpo da tabela -->
            	<!-- início estrutura repetição -->
 
-                <?php do{?>
+               <?php do{?>
                     <tr>
                         <td class="hidden"></td>
                             <?php echo $row['id_produto']?>

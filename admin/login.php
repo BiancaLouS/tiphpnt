@@ -52,7 +52,7 @@
     <title>Chuleta Quente - Login</title>
 </head>
 
-<body>
+<body class="fundofixo">
     <main class="container">
         <section>
             <article>

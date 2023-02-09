@@ -19,7 +19,7 @@
     <main class="container">
         
     <h2 class="breadcrumb alert-danger center"> 
-        Seja Bem Vindo!
+      <strong> Seja Bem Vindo! </strong>
     </h2>
 
     <div class="thumbnail">

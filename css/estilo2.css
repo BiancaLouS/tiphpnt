@@ -6,6 +6,6 @@
     background-size: cover; 
 }
 
-.logo{
-    justify-content: space-around;
+.center{
+    text-align: center;
 }

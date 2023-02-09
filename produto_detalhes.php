@@ -20,7 +20,7 @@ $row_detalhe = $produto_detalhe->fetch_assoc();
 
     <div class="container">
         <!-- Top para voltar -->
-        <h2 class="breadcrumb alert-danger">
+        <h2 class="breadcrumb alert-danger center">
                 <a href="javascript:window.history.go(-1)" class="btn btn-danger">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>   

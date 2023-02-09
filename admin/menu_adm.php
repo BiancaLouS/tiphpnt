@@ -26,8 +26,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="index.php" class="navbar-brand">
-            <img width="80px" src="../images/logo.png" alt="logo" class="logo">
+        <a href="index.php" class="navbar-bra">
+            <img width="80px" src="../images/logo.png" alt="logo">
         </a>
     </div>
     <!-- Fecha Agrupamento para exibição Mobile -->
