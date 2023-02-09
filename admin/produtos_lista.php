@@ -42,8 +42,9 @@
 
                <?php do{?>
                     <tr>
-                        <td class="hidden"></td>
+                        <td class="hidden">
                             <?php echo $row['id_produto']?>
+                        </td>
                         <td>
                             <?php echo $row['rotulo_tipo']?>
                             <span class="visible-xs"></span>
