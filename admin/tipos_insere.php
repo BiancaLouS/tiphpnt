@@ -65,18 +65,18 @@
                                         <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                             </span>
-                                            <input type="text" name="descri_tipos" id="descri_produto"
+                                            <input type="text" name="id_tipo" id="id_tipo"
                                                     class="form-control" placeholder="Digite o Tipo do Produto: "
                                                     maxlength="100" required>
                                     </div>
 
-                                    <label for="resumo_produto">Sigla:</label>
+                                    <label for="">Sigla:</label>
                                    
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                         </span>
-                                        <input type="text" name="descri_produto" id="descri_produto"
+                                        <input type="text" name="" id="descri_produto"
                                                 class="form-control" placeholder="Digite a Sigla do Tipo:"
                                                 maxlength="100" required>
                                     </div>                                 
