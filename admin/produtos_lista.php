@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilo2.css">
 </head>
-<body> 
+<body class="fundofixo"> 
     <?php include "menu_adm.php"; ?>
     <main class="container">
         <h2 class="breadcrumb alert-danger center"><strong> Lista de Produtos </strong></h2>
-        <table class="table table-hover table-condensed tb-opacidade alert-warning">
+        <table class="table table-hover table-condensed tb-opacidade alert-danger">
             <thead>
                 <th class="hidden">ID</th>
                 <th>TIPO</th>
