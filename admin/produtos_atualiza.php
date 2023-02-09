@@ -77,7 +77,7 @@
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>   
                     </a>                
-                     Adicione um Novo Produto
+                    <strong> Alterar Produto </strong>
                 </h2>
                   
                         <!-- Inserindo Produtos  -->
