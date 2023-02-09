@@ -1,56 +1,43 @@
 <?php 
     include 'acesso_com.php';
     include '../conn/connect.php';
-
-    if($_POST){ 
-        if($_FILES['imagem_produto']['name']){
+    
+    if($_POST){
+        if(isset($_POST['enviar'])){
             $nome_img = $_FILES['imagem_produto']['name'];
             $tmp_img = $_FILES['imagem_produto']['tmp_name'];
             $dir_img = "../images/".$nome_img;
             move_uploaded_file($tmp_img, $dir_img);
-        }  else{
-                $nome_img = $_POST['imagem_produtoAtual'];
         }
+        
         $id_tipo_produto = $_POST['id_tipo_produto'];
         $destaque_produto = $_POST['destaque_produto'];
         $descri_produto = $_POST['descri_produto'];
         $resumo_produto = $_POST['resumo_produto'];
         $valor_produto = $_POST['valor_produto'];
-        $imagem_produto = $nome_img;
+        $imagem_produto = $_FILES['imagem_produto']['name'];
 
-        $id = $_POST['id_produto'];
+        $insereProd = "INSERT INTO  tbprodutos
+                     (id_tipo_produto, destaque_produto, descri_produto, resumo_produto, valor_produto, imagem_produto);
 
-        $updateSql = "update tbprodutos
-                      set id_tipo_produto = '$id_tipo_produto',
-                          destaque_produto = '$destaque_produto',
-                          descri_produto = '$descri_produto',
-                          resumo_produto = '$resumo_produto',
-                          valor_produto = '$valor_produto',
-                          $imagem_produto = '$nome_img';
-
-                          where id_produto = $id;";
+                        VALUES 
+                     ('$id_tipo_produto','$destaque_produto','$descri_produto','$resumo_produto','$valor_produto','$imagem_produto');
+                 ";
+        $resultado = $conn->query($insereProd);
+        //Após a gravação bem sucedida do produto, volta (Atualiza) para lista.
         
-        $resultado = $conn->query($updateSql);
-        if($resultado){
+        if(mysqli_insert_id($conn)){
             header('location: produtos_lista.php');
         }
     }
 
-    if($_GET){
-        $id_form = $_GET['id_produto'];
-    } else{
-        $id_form = 0;
-    }
-    $lista = $conn->query("select * from tbprodutos where id_produto = $id_form");
-    $row = $lista->fetch_assoc();
-    $numRows = $lista->num_rows;
-
-           // Selecionar os dados e chave estrangeira (lista de tipos de produtos)
+        // Selecionar os dados e chave estrangeira (lista de tipos de produtos)
         
-           $consulta_fk = "select * from tbtipos order by rotulo_tipo";
-           $lista_fk = $conn->query($consulta_fk);
-           $row_fk = $lista_fk->fetch_assoc();
-           $nlinhas = $lista_fk->num_rows;
+        $consulta_fk = "select * from tbtipos order by rotulo_tipo";
+        $lista_fk = $conn->query($consulta_fk);
+        $row_fk = $lista_fk->fetch_assoc();
+        $nlinhas = $lista_fk->num_rows;
+
    
 ?>
 
@@ -77,7 +64,7 @@
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>   
                     </a>                
-                    <strong> Alterar Produto </strong>
+                  <strong> Adicione um Novo Tipo </strong>
                 </h2>
                   
                         <!-- Inserindo Produtos  -->
@@ -86,9 +73,7 @@
                     <div class="thumbnail">
                         <div class="alert alert-danger" role="alert">
                             
-                        <form action="produtos_atualiza.php" method="post" name="form_produto_atualiza" enctype="multipart/form-data" id="form_produto_atualiza">
-
-                        <input type="hidden" name="id_produto" id="id_produto" value="<?php echo $row['id_produto'] ?>">
+                            <form action="produtos_insere.php" method="post" name="form_produto_insere" enctype="multipart/form-data" id="form_produto_insere">
                                     
                                 <label for="id_tipo_produto">Tipo:</label>
                                     
@@ -109,10 +94,10 @@
                                     <label for="destaque_produto">Destaque:</label>
                                     <div class="input-group">
                                         <label for="destaque_produtos_s" class="radio-inline">
-                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Sim" <?php echo $row['destaque_produto']=="Sim"?"checked":null ?>>Sim
+                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Sim">Sim
                                         </label>
                                         <label for="destaque_produtos_s" class="radio-inline">
-                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Não" <?php echo $row['destaque_produto']=="Não"?"checked":null ?>>Não
+                                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Não" checked>Não
                                         </label>
                                     </div>
                                         
@@ -123,7 +108,7 @@
                                         </span>
                                         <input type="text" name="descri_produto" id="descri_produto"
                                                 class="form-control" placeholder="Digite a descrição do Produto"
-                                                maxlength="100" value="<?php echo $row['descri_produto'];?>">
+                                                maxlength="100" required>
                                         
                                     </div>
 
@@ -136,7 +121,7 @@
                                         <textarea name="resumo_produto" id="resumo_produto"
                                                 cols="30" rows="8" 
                                                 class="form-control" placeholder="Digite os detalhes do Produto"
-                                                required><?php echo $row['resumo_produto'];?></textarea>
+                                                required></textarea>
                                     </div>
 
                                     <label for="valor_produto">Valor do Produto:</label>
@@ -146,32 +131,10 @@
                                         </span>
                                         <input type="number" name="valor_produto" id="valor_produto"
                                                 class="form-control" placeholder="Digite o valor do Produto"
-                                                required required min="0" step="0.01" value="<?php echo $row['valor_produto'];?>">
+                                                required required min="0" step="0.01">
 
                                     </div>
-
-                                    <label for="imagem_produto_atual">Imagem Atual:</label>
-                                    <img src="../images/" <?php echo $row['imagem_produto'];?> alt="" srcset="">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    
-                                    <label for="imagem_produto">Imagem Nova:</label>
+                                    <label for="imagem_produto">Inserir Imagem:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
@@ -181,7 +144,7 @@
                                     </div>
                                     <br>
                                     <hr>
-                                    <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="Atualizar">
+                                    <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="Cadastrar">
                             </form>
                         </div>
                     </div>
