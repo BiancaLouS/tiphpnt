@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carousel</title>
 
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
 <body>
-    <div data-ride="" class="carousel slide">
-
+    <div data-ride="carousel" class="carousel slide" id="banners">
+        <ol class="carousel-indicators">
+            <li data-target="#banners" data-slide-to="0
+            "></li>
+        </ol>
     </div>
 </body>
 </html>
