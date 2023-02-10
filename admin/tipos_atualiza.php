@@ -3,7 +3,6 @@
     include '../conn/connect.php';
 
     if($_POST){
-
         $id_tipo = $_POST['id_tipo'];
         $sigla_tipo = $_POST['sigla_tipo'];
         $rotulo_tipo = $_POST['rotulo_tipo'];
@@ -36,7 +35,6 @@
            $lista_fk = $conn->query($consulta_fk);
            $row_fk = $lista_fk->fetch_assoc();
            $nlinhas = $lista_fk->num_rows;
-        
 ?>
 
 <!DOCTYPE html>
