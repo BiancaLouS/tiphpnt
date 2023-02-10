@@ -10,14 +10,11 @@
         $id = $_POST['id_tipo'];
 
         $updateSql = "update tbtipos
-                      set id_tipo_produto = '$id_tipo_produto',
-                          destaque_produto = '$destaque_produto',
-                          descri_produto = '$descri_produto',
-                          resumo_produto = '$resumo_produto',
-                          valor_produto = '$valor_produto',
-                          $imagem_produto = '$nome_img';
+                      set id_tipo = '$id_tipo',
+                          sigla_tipo = '$sigla_tipo',
+                          rotulo_tipo = '$rotulo_tipo',
 
-                          where id_produto = $id;";
+                          where id_tipo = $id;";
         
         $resultado = $conn->query($updateSql);
         if($resultado){
@@ -30,12 +27,12 @@
     } else{
         $id_form = 0;
     }
-    $lista = $conn->query("select * from tbprodutos where id_produto = $id_form");
+    $lista = $conn->query("select * from tbtipos where id_tipo = $id_form");
     $row = $lista->fetch_assoc();
     $numRows = $lista->num_rows;
 
 
-           // Selecionar os dados e chave estrangeira (lista de tipos de produtos)
+           // Selecionar os dados e chave estrangeira (lista de tipos de tipos)
         
            $consulta_fk = "select * from tbtipos order by rotulo_tipo";
            $lista_fk = $conn->query($consulta_fk);
@@ -55,7 +52,7 @@
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/estilo2.css">
 
-        <title>Produto Insere</title>
+        <title>Tipo Atualiza</title>
     </head>
 
     <body class="fundofixo">
@@ -68,7 +65,7 @@
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>   
                     </a>                
-                    <strong> Alterar Produto </strong>
+                    <strong> Alterar Tipo </strong>
                 </h2>
                   
                         <!-- Inserindo Produtos  -->
@@ -162,36 +159,5 @@
                 </div>
             </div>
         </main>
-
-        <!-- Script para Imagem  -->
-        <script>
-            document.getElementsById("imagem_produto").onchange = function(){
-                var reader = new FileReader();
-                if(this.files[0].size>528385){
-                    alert("A imagem deve ter no máximo 500KB");
-                    $("#Imagem").attr("src", "blank");
-                    $("#imagem").hide();
-                    $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
-                    $("#imagem_produto").unwrap();
-                    return false
-                }
-
-                if(this.files[0].type.indexOf("image")==-1){
-                    alert("Formato inválido, escolha uma imagem!");
-                    $("#Imagem").attr("src", "blank");
-                    $("#imagem").hide();
-                    $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
-                    $("#imagem_produto").unwrap();
-                    return false
-                }
-                reader.onload = function(e){
-                    document.getElementById("Imagem").src = e.target.result
-                    $("#imagem").show();
-                }
-                reader.readAsDataURL(this.file[0])
-            }
-        </script>
-
-
     </body>
 </html>

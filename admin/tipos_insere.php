@@ -56,7 +56,7 @@
                     <div class="thumbnail">
                         <div class="alert alert-danger" role="alert">
                         <div>
-                            <form action="tipos_insere.php" method="post" name="form_tipos_insere" enctype="multipart/form-data" id="form_tipos_insere"> 
+                            <form action="tipos_insere.php" method="post" name="form_tipos_insere" enctype="multipart/form-data" id="form_tipos_insere">
                         </div>
                        
                                 <label for="">Novo Tipo:</label>
@@ -83,7 +83,6 @@
                                     <hr>
                                     <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="Cadastrar">
                             </form>
-                        </div>
                     </div>
                 </div>
             </div>

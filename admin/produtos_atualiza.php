@@ -66,7 +66,7 @@
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/estilo2.css">
 
-        <title>Produto Insere</title>
+        <title>Produto Atualiza</title>
     </head>
 
     <body class="fundofixo">
