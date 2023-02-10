@@ -3,22 +3,23 @@
     include '../conn/connect.php';
     
     if($_POST){
+        
         $id_tipo = $_POST['id_tipo'];
         $sigla_tipo = $_POST['sigla_tipo'];
         $rotulo_tipo = $_POST['rotulo_tipo'];
-        
-        $insereTipo = "INSERT INTO  tbtipos
-                     (id_tipo, sigla_tipo, rotulo_tipo);
 
+        $insereProd = "INSERT INTO  tbtipos
+                     (id_tipo, sigla_tipo, rotulo_tipo)
                         VALUES 
-                     ('$id_tipo', '$sigla_tipo', '$rotulo_tipo');
+                     ('$id_tipo','$sigla_tipo','$rotulo_tipo');
                  ";
-        $resultado = $conn->query($insereTipo);
-                
+        $resultado = $conn->query($insereProd);
+        
         if(mysqli_insert_id($conn)){
             header('location: tipos_lista.php');
         }
     }
+        
         $consulta_fk = "select * from tbtipos order by rotulo_tipo";
         $lista_fk = $conn->query($consulta_fk);
         $row_fk = $lista_fk->fetch_assoc();
@@ -44,45 +45,46 @@
         <main class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-8">
-                <h2 class="breadcrumb alert-danger center">
-                    <a href="javascript:window.history.go(-1)" class="btn btn-danger">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>   
-                    </a>                
-                  <strong> Adicione um Novo Tipo </strong>
-                </h2>
+                    <h2 class="breadcrumb alert-danger center">
+                        <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>                 
+                        <strong> Adicione um Novo Tipo </strong>
+                    </h2>
+                  
+                        <!-- Inserindo Produtos  -->
 
                     </h2>
                     <div class="thumbnail">
                         <div class="alert alert-danger" role="alert">
-                        <div>
+                            
                             <form action="tipos_insere.php" method="post" name="form_tipos_insere" enctype="multipart/form-data" id="form_tipos_insere">
-                        </div>
-                       
-                                <label for="">Novo Tipo:</label>
+                                        
+                                    <label for="rotulo_tipo">Novo Tipo:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                            </span>
-                                            <input type="text" name="id_tipo" id="id_tipo"
-                                                    class="form-control" placeholder="Digite o Tipo do Produto: "
-                                                    maxlength="100" required>
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                        </span>
+                                        <input type="text" name="rotulo_tipo" id="rotulo_tipo"
+                                                class="form-control" placeholder="Digite o Novo Tipo"
+                                                maxlength="100" required>
                                     </div>
 
-                                    <label for="">Sigla:</label>
-                                   
+                                    <label for="sigla_tipo">Nova Sigla:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </span>
-                                        <input type="text" name="" id="descri_produto"
-                                                class="form-control" placeholder="Digite a Sigla do Tipo:"
+                                        <input type="text" name="sigla_tipo" id="sigla_tipo"
+                                                class="form-control" placeholder="Digite a Nova Sigla"
                                                 maxlength="100" required>
-                                    </div>                                 
-                                   
+                                    </div>
+
+                                    <br>
                                     <hr>
                                     <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="Cadastrar">
                             </form>
+                        </div>
                     </div>
                 </div>
             </div>
