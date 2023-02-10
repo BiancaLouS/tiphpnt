@@ -8,6 +8,12 @@
     background-size: cover; 
 }
 
+.fundologin{
+    background: url(../images/fundologin.jpg) no-repeat fixed;
+    -webkit-background-size:cover;
+    background-size: cover; 
+}
+
 body{
     margin-top: 40px;
     padding: 40px;

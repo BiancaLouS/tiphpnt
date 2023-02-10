@@ -47,7 +47,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/2495680ceb.js" crossorigin="anonymous"></script>
     <!-- Link para CSS específico -->
-    <link rel="stylesheet" href="../css/meu_estilo.css" type="text/css">
+    <link rel="stylesheet" href="../css/estilo.css" type="text/css">
     
     <title>Chuleta Quente - Login</title>
 </head>

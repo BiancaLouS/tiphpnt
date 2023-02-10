@@ -59,13 +59,12 @@
         <main class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-8">
-                <h2 class="breadcrumb alert-danger center">
-                    <a href="javascript:window.history.go(-1)" class="btn btn-danger">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>   
-                    </a>                
-                  <strong> Adicione um Novo Produto </strong>
-                </h2>
+                    <h2 class="breadcrumb alert-danger center">
+                        <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>                 
+                        <strong> Adicione um Novo Produto </strong>
+                    </h2>
                   
                         <!-- Inserindo Produtos  -->
 
@@ -82,13 +81,13 @@
                                             <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
                                         </span>
                                         <select name="id_tipo_produto" id="id_tipo_produto" class="form-control" required>
-                                            <?php do{ ?>
+                                            <?php do { ?>
                                             
                                             <option value="<?php echo $row_fk['id_tipo']?>">
                                                 <?php echo $row_fk['rotulo_tipo']?>
                                             </option>
                                             
-                                            <?php }while($row_fk=$lista_fk->fetch_assoc()); ?>
+                                            <?php } while($row_fk=$lista_fk->fetch_assoc()); ?>
                                         </select>
                                     </div>
                                     <label for="destaque_produto">Destaque:</label>
