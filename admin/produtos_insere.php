@@ -123,13 +123,13 @@
                                                 required></textarea>
                                     </div>
 
-                                    <label for="valor_produto">Valor do Produto:</label>
+                                    <label for="valor_produto">Preço do Produto:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
                                         </span>
                                         <input type="number" name="valor_produto" id="valor_produto"
-                                                class="form-control" placeholder="Digite o valor do Produto"
+                                                class="form-control" placeholder="Digite o preço do Produto"
                                                 required required min="0" step="0.01">
 
                                     </div>
