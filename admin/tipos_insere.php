@@ -11,7 +11,7 @@
                      (id_tipo, sigla_tipo, rotulo_tipo);
 
                         VALUES 
-                     ('$id_tipo','$sigla_tipo','$rotulo_tipo');
+                     ('$id_tipo', '$sigla_tipo', '$rotulo_tipo');
                  ";
         $resultado = $conn->query($insereTipo);
                 
@@ -19,7 +19,6 @@
             header('location: tipos_lista.php');
         }
     }
-              
         $consulta_fk = "select * from tbtipos order by rotulo_tipo";
         $lista_fk = $conn->query($consulta_fk);
         $row_fk = $lista_fk->fetch_assoc();
