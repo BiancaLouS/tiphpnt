@@ -9,7 +9,7 @@
             $dir_img = "../images/".$nome_img;
             move_uploaded_file($tmp_img, $dir_img);
         }  else{
-                $nome_img = $_POST['imagem_produtoAtual'];
+                 $nome_img = $_POST['imagem_produtoAtual'];
         }
         $id_tipo_produto = $_POST['id_tipo_produto'];
         $destaque_produto = $_POST['destaque_produto'];
