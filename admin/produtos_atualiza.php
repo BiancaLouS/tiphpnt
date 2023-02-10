@@ -2,14 +2,14 @@
     include 'acesso_com.php';
     include '../conn/connect.php';
 
-    if($_POST){ 
+    if($_POST){
         if($_FILES['imagem_produto']['name']){
             $nome_img = $_FILES['imagem_produto']['name'];
             $tmp_img = $_FILES['imagem_produto']['tmp_name'];
             $dir_img = "../images/".$nome_img;
             move_uploaded_file($tmp_img, $dir_img);
-        }  else{
-                 $nome_img = $_POST['imagem_produtoAtual'];
+        } else{
+            $nome_img = $_POST['imagem_produto_atual'];
         }
         $id_tipo_produto = $_POST['id_tipo_produto'];
         $destaque_produto = $_POST['destaque_produto'];
@@ -45,12 +45,14 @@
     $row = $lista->fetch_assoc();
     $numRows = $lista->num_rows;
 
+
            // Selecionar os dados e chave estrangeira (lista de tipos de produtos)
         
            $consulta_fk = "select * from tbtipos order by rotulo_tipo";
            $lista_fk = $conn->query($consulta_fk);
            $row_fk = $lista_fk->fetch_assoc();
            $nlinhas = $lista_fk->num_rows;
+        
    
 ?>
 
