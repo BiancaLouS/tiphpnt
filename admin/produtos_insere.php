@@ -18,7 +18,7 @@
         $imagem_produto = $_FILES['imagem_produto']['name'];
 
         $insereProd = "INSERT INTO  tbprodutos
-                     (id_tipo_produto, destaque_produto, descri_produto, resumo_produto, valor_produto, imagem_produto);
+                     (id_tipo_produto, destaque_produto, descri_produto, resumo_produto, valor_produto, imagem_produto)
                         VALUES 
                      ('$id_tipo_produto','$destaque_produto','$descri_produto','$resumo_produto','$valor_produto','$imagem_produto');
                  ";
