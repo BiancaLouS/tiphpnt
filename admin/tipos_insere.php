@@ -63,7 +63,7 @@
                                     <label for="rotulo_tipo">Novo Tipo:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                            <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
                                         </span>
                                         <input type="text" name="rotulo_tipo" id="rotulo_tipo"
                                                 class="form-control" placeholder="Digite o Novo Tipo"
@@ -82,7 +82,7 @@
 
                                     <br>
                                     <hr>
-                                    <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="Cadastrar">
+                                    <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="Cadastrar Novo Tipo">
                             </form>
                         </div>
                     </div>
