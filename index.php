@@ -21,14 +21,9 @@
     <h2 class="breadcrumb alert-danger center"> 
       <strong> Seja Bem Vindo! </strong>
     </h2>
-
-    <div class="thumbnail">
-            <img src="images/churrascaria.jpg" class="img-responsive img-rounded"> 
-    </div>
-
-        <!-- area de carrosel -->
-        <?php include 'carousel.php';?>
-
+    
+    <!-- area de carrosel -->
+    <?php include 'carousel.php';?>
         
         <!-- area de destaque -->
         <a neme="destaques">&nbsp;</a>
