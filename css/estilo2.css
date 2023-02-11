@@ -9,3 +9,8 @@
 .center{
     text-align: center;
 }
+
+.emp{
+    display: flex;
+    justify-content: space-around;
+}
