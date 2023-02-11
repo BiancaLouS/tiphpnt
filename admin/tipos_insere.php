@@ -8,12 +8,12 @@
         $sigla_tipo = $_POST['sigla_tipo'];
         $rotulo_tipo = $_POST['rotulo_tipo'];
 
-        $insereProd = "INSERT INTO  tbtipos
+        $InsereTipo = "INSERT INTO  tbtipos
                      (id_tipo, sigla_tipo, rotulo_tipo)
                         VALUES 
                      ('$id_tipo','$sigla_tipo','$rotulo_tipo');
                  ";
-        $resultado = $conn->query($insereProd);
+        $resultado = $conn->query($InsereTipo);
         
         if(mysqli_insert_id($conn)){
             header('location: tipos_lista.php');
