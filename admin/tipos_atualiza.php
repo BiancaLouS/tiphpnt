@@ -12,7 +12,7 @@
         $updateSql = "update tbtipos
                       set id_tipo = '$id_tipo',
                           sigla_tipo = '$sigla_tipo',
-                          rotulo_tipo = '$rotulo_tipo',
+                          rotulo_tipo = '$rotulo_tipo'
                           
                           where id_tipo = $id;";
         
@@ -84,11 +84,11 @@
                                     </div>
 
                                     <label for="sigla_tipo">Sigla:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
-                                        </span>
-                                        <input type="text" name="sigla_tipo" id="sigla_tipo"
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                            </span>
+                                            <input type="text" name="sigla_tipo" id="sigla_tipo"
                                                 class="form-control" placeholder="Digite a Sigla"
                                                 maxlength="100" value="<?php echo $row['sigla_tipo'];?>">
                                     </div>
