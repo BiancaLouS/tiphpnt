@@ -20,9 +20,9 @@
         }
     }
         
-        $consulta_fk = "select * from tbusuarios order by login_usuario";
+        $consulta_fk = "select * from tbusuario";
         $lista_fk = $conn->query($consulta_fk);
-        $row_fk = $lista_fk->fetch_assoc();
+        $row_fk = $lista_fk->fetch_all();
         $nlinhas = $lista_fk->num_rows;
 
 ?>

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rodapé</title>
+
 </head>
 <body class="fundofixo">
     <div class="row panel-footer fundo-rodape">
@@ -150,7 +151,7 @@
                 </h6>
             </div>
         </div>
-    </div>
-    
+    </div> 
+  
 </body>
 </html>
