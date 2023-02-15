@@ -11,8 +11,6 @@
         $cpf = $_POST['cpf'];
         $email = $_POST['email'];
 
-        
-
         $insereUser = "INSERT INTO  ti93phpdb01.tbusuarios
                      (id_usuario, login_usuario, senha_usuario, nivel_usuario, cpf, email)
                         VALUES 
