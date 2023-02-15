@@ -40,7 +40,13 @@ $rows_tipos = $lista_tipos->fetch_all();
             <!-- nav direita  -->
 
             <div class="collapse navbar-collapse" id="menupublico">
+
                 <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <button type="button" class="btn btn-danger">Faça sua Reserva</button>
+                    </li>
+
                     <li class="active">
                         <a href="index.php">
                             <span class="glyphicon glyphicon-home"></span>
@@ -97,6 +103,8 @@ $rows_tipos = $lista_tipos->fetch_all();
                             <span class="glyphicon glyphicon-user">&nbsp;Admin|Cliente</span>
                         </a>
                     </li>
+
+                    
                 </ul>
             </div>
 
