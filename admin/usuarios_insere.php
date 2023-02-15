@@ -7,11 +7,12 @@
         $id_usuario = $_POST['id_usuario'];
         $login_usuario = $_POST['login_usuario'];
         $nivel_usuario = $_POST['nivel_usuario'];
+        $senha_usuario = $_POST['senha_usuario'];
 
-        $insereUser = "INSERT INTO  tbusuario
-                     (id_usuario, login_usuario, nivel_usuario)
+        $insereUser = "INSERT INTO  ti93phpdb01.tbusuarios
+                     (id_usuario, login_usuario, nivel_usuario, senha_usuario)
                         VALUES 
-                     ('$id_usuario','$login_usuario','$nivel_usuario');
+                     ('$id_usuario','$login_usuario','$nivel_usuario', '$senha_usuario');
                  ";
         $resultado = $conn->query($insereUser);
         
@@ -80,6 +81,15 @@
                                                 maxlength="100" required>
                                     </div>
 
+                                    <label for="senha_usuario">Senha:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                                        </span>
+                                        <input type="text" name="senha_usuario" id="senha_usuario"
+                                                class="form-control" placeholder="Crie uma Senha"
+                                                maxlength="100" required>
+                                    </div>   
 
                                     <br>
                                     <hr>
