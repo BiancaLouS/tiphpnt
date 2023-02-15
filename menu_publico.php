@@ -21,6 +21,7 @@ $rows_tipos = $lista_tipos->fetch_all();
         <div class="container-fluid">
 
             <!-- agrupamento mobile  -->
+            
 
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menupublico" aria-expanded="false">
@@ -35,12 +36,20 @@ $rows_tipos = $lista_tipos->fetch_all();
                 </a>
             </div>
             
+            
+
             <!-- fecha agrupamento mobile  -->
             
             <!-- nav direita  -->
 
             <div class="collapse navbar-collapse" id="menupublico">
+
                 <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <button type="button" class="btn btn-danger active">Faça sua Reserva! </button>
+                    </li>
+
                     <li class="active">
                         <a href="index.php">
                             <span class="glyphicon glyphicon-home"></span>
@@ -97,11 +106,36 @@ $rows_tipos = $lista_tipos->fetch_all();
                             <span class="glyphicon glyphicon-user">&nbsp;Admin|Cliente</span>
                         </a>
                     </li>
+
                 </ul>
             </div>
 
         </div>
     </nav>
     
+    <div class="modal fade" id="modalEdit" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Deseja mesmo excluir o item?
+                    <h4><span class="nome text-danger"></span></h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" type="button" class="btn btn-danger delete-yes">
+                        Confirmar
+                    </a>
+                    <button class="btn btn-success" data-dismiss="modal">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

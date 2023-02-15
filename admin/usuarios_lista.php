@@ -23,6 +23,8 @@
             <thead>
                 <th class="hidden">ID</th>
                 <th>LOGIN</th>
+                <th>E-MAIL</th>
+                <th>CPF</th>
                 <th>NIVEL</th>
                  <th>
                     <a href="usuarios_insere.php" target="_self" class="btn btn-block btn-primary btn-xs" role="button">
@@ -45,6 +47,19 @@
                             <span class="visible-xs"></span>
                             <span class="hidden-xs"></span>
                         </td>
+
+                        <td>
+                            <?php echo $row['email']?>
+                            <span class="visible-xs"></span>
+                            <span class="hidden-xs"></span>
+                        </td>
+
+                        <td>
+                            <?php echo $row['cpf']?>
+                            <span class="visible-xs"></span>
+                            <span class="hidden-xs"></span>
+                        </td>
+
                         <td> 
                             <?php echo $row['nivel_usuario']?> 
                         </td>
