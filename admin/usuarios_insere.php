@@ -6,13 +6,17 @@
         
         $id_usuario = $_POST['id_usuario'];
         $login_usuario = $_POST['login_usuario'];
-        $nivel_usuario = $_POST['nivel_usuario'];
         $senha_usuario = $_POST['senha_usuario'];
+        $nivel_usuario = $_POST['nivel_usuario'];
+        $cpf = $_POST['cpf'];
+        $email = $_POST['email'];
+
+        
 
         $insereUser = "INSERT INTO  ti93phpdb01.tbusuarios
-                     (id_usuario, login_usuario, nivel_usuario, senha_usuario)
+                     (id_usuario, login_usuario, senha_usuario, nivel_usuario, cpf, email)
                         VALUES 
-                     ('$id_usuario','$login_usuario','$nivel_usuario', '$senha_usuario');
+                     ('$id_usuario','$login_usuario','$senha_usuario', '$nivel_usuario', '$cpf', '$email');
                  ";
         $resultado = $conn->query($insereUser);
         
@@ -81,7 +85,27 @@
                                                 maxlength="100" required>
                                     </div>
 
-                                    <label for="senha_usuario">Senha:</label>
+                                <label for="email">E-mail:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                        </span>
+                                        <input type="email" name="email" id="email"
+                                                class="form-control" placeholder="Digite o E-mail"
+                                                maxlength="100" required>
+                                    </div>
+
+                                <label for="cpf">CPF:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
+                                        </span>
+                                        <input type="text" name="cpf" id="cpf"
+                                                class="form-control" placeholder="Digite o CPF"
+                                                maxlength="100" required>
+                                    </div>
+
+                                <label for="senha_usuario">Senha:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
