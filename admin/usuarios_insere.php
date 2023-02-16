@@ -22,11 +22,6 @@
             header('location: usuarios_lista.php');
         }
     }
-        
-        $consulta_fk = "select * from tbusuario";
-        $lista_fk = $conn->query($consulta_fk);
-        $row_fk = $lista_fk->fetch_all();
-        $nlinhas = $lista_fk->num_rows;
 
 ?>
 
