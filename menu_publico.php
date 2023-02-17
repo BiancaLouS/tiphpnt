@@ -46,9 +46,32 @@ $rows_tipos = $lista_tipos->fetch_all();
 
             <div class="collapse navbar-collapse" id="menupublico">
 
-                        <a href="pedir_reserva.php">
-                            <button type="button" class="btn btn-danger active" style="margin-left: 480px; margin-top: 10px; margin-bottom: 0px;">Faça sua Reserva! </button>
-                        </a>
+                <button type="button" class="btn btn-danger active" style="margin-left: 480px; margin-top: 10px; margin-bottom: 0px;" data-toggle="modal" data-target="#myModal">Faça sua Reserva! </button>
+
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Modal body..
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                    </div>
+                </div>
+                </div>       
 
                 <ul class="nav navbar-nav navbar-right">
                     
