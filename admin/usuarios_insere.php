@@ -14,7 +14,7 @@
         $insereUser = "INSERT INTO  ti93phpdb01.tbusuarios
                      (id_usuario, login_usuario, senha_usuario, nivel_usuario, cpf, email)
                         VALUES 
-                     ('$id_usuario','$login_usuario','$senha_usuario', '$nivel_usuario', '$cpf', '$email');
+                     ('$id_usuario','$login_usuario','$senha_usuario', '$nivel_usuario', '$cpf', '$email')
                  ";
         $resultado = $conn->query($insereUser);
         
@@ -23,11 +23,6 @@
         }
     }
         
-        $consulta_fk = "select * from tbusuario";
-        $lista_fk = $conn->query($consulta_fk);
-        $row_fk = $lista_fk->fetch_all();
-        $nlinhas = $lista_fk->num_rows;
-
 ?>
 
 <!DOCTYPE html>
@@ -72,16 +67,6 @@
                                                 class="form-control" placeholder="Digite o Login"
                                                 maxlength="100" required>
                                     </div>     
-                        
-                                <label for="nivel_usuario">Nível:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
-                                        </span>
-                                        <input type="text" name="nivel_usuario" id="nivel_usuario"
-                                                class="form-control" placeholder="Digite o Nível"
-                                                maxlength="100" required>
-                                    </div>
 
                                 <label for="email">E-mail:</label>
                                     <div class="input-group">
