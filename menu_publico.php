@@ -124,7 +124,7 @@ $rows_tipos = $lista_tipos->fetch_all();
                     </button>
                 </div>
                 <div class="modal-body">
-                    Deseja mesmo excluir o item?
+                    Regras da Reserva:
                     <h4><span class="nome text-danger"></span></h4>
                 </div>
                 <div class="modal-footer">
@@ -146,7 +146,7 @@ $rows_tipos = $lista_tipos->fetch_all();
         var nome = $(this).data('nome'); 
         var id = $(this).data('id');         
         $('span.nome').text(nome); 
-        $('a.delete-yes').attr('href','tipos_excluir.php?id_tipo='+id); 
+        $('a.delete-yes').attr('href','pedir_reserva.php?id='+id); 
         $('#modalEdit').modal('show'); 
     });
 </script>
