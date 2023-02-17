@@ -58,12 +58,13 @@ $rows_tipos = $lista_tipos->fetch_all();
 
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    Modal body..
+                                    A solicitação da reserva deve ocorrer com 48 horas de antecedência; <br>
+                                    A promoção é válida somente em 90 dias.
                                 </div>
 
                                 <!-- Modal footer -->
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-danger">Enviar Pedido de Reserva</button>
                                 </div>
 
                             </div>
