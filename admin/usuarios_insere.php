@@ -22,7 +22,7 @@
             header('location: usuarios_lista.php');
         }
     }
-        
+
 ?>
 
 <!DOCTYPE html>

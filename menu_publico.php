@@ -10,6 +10,8 @@ $rows_tipos = $lista_tipos->fetch_all();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Menu Público</title>
 </head>
@@ -47,7 +49,7 @@ $rows_tipos = $lista_tipos->fetch_all();
                 <ul class="nav navbar-nav navbar-right">
                     
                     <li>
-                        <button type="button" class="btn btn-danger active">Faça sua Reserva! </button>
+                        <button type="button" class="btn btn-danger active" style="margin: 10px;">Faça sua Reserva! </button>
                     </li>
 
                     <li class="active">
