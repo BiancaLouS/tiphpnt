@@ -46,12 +46,12 @@ $rows_tipos = $lista_tipos->fetch_all();
 
             <div class="collapse navbar-collapse" id="menupublico">
 
+                        <a href="pedir_reserva.php">
+                            <button type="button" class="btn btn-danger active" style="margin-left: 480px; margin-top: 10px; margin-bottom: 0px;">Faça sua Reserva! </button>
+                        </a>
+
                 <ul class="nav navbar-nav navbar-right">
                     
-                    <li>
-                        <button type="button" class="btn btn-danger active" style="margin: 10px; margin-bottom: 0px;">Faça sua Reserva! </button>
-                    </li>
-
                     <li class="active">
                         <a href="index.php">
                             <span class="glyphicon glyphicon-home"></span>
@@ -138,6 +138,18 @@ $rows_tipos = $lista_tipos->fetch_all();
             </div>
         </div>
     </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $('.delete').on('click',function(){
+        var nome = $(this).data('nome'); 
+        var id = $(this).data('id');         
+        $('span.nome').text(nome); 
+        $('a.delete-yes').attr('href','tipos_excluir.php?id_tipo='+id); 
+        $('#modalEdit').modal('show'); 
+    });
+</script>
 
 </body>
 </html>
