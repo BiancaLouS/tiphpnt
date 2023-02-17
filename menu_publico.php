@@ -49,7 +49,7 @@ $rows_tipos = $lista_tipos->fetch_all();
                 <ul class="nav navbar-nav navbar-right">
                     
                     <li>
-                        <button type="button" class="btn btn-danger active" style="margin: 10px;">Faça sua Reserva! </button>
+                        <button type="button" class="btn btn-danger active" style="margin: 10px; margin-bottom: 0px;">Faça sua Reserva! </button>
                     </li>
 
                     <li class="active">
