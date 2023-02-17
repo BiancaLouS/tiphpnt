@@ -136,42 +136,6 @@ $rows_tipos = $lista_tipos->fetch_all();
 
         </div>
     </nav>
-    
-    <div class="modal fade" id="modalEdit" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button class="close" data-dismiss="modal" type="button">
-                        &times;
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Regras da Reserva:
-                    <h4><span class="nome text-danger"></span></h4>
-                </div>
-                <div class="modal-footer">
-                    <a href="#" type="button" class="btn btn-danger delete-yes">
-                        Confirmar
-                    </a>
-                    <button class="btn btn-success" data-dismiss="modal">
-                        Cancelar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script type="text/javascript">
-    $('.delete').on('click',function(){
-        var nome = $(this).data('nome'); 
-        var id = $(this).data('id');         
-        $('span.nome').text(nome); 
-        $('a.delete-yes').attr('href','pedir_reserva.php?id='+id); 
-        $('#modalEdit').modal('show'); 
-    });
-</script>
 
 </body>
 </html>
