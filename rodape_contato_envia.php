@@ -23,7 +23,13 @@
         $mail->isHTML(true);
                                           
         $mail->Subject = 'Mensagem Subject Bianca';
-        $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+        $body = "This is the HTML message body <b>in bold!</b>
+            nome: $_POST['nome_contato']<br>
+            E-mail: $_POST['email_contato']<br>
+            Mensagem:<br> 
+            $_POST['msg_contato']<br>";
+
+        $mail->Body = $body;
 
         $mail->send();
         echo 'E-mail Enviado!';

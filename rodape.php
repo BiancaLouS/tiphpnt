@@ -120,7 +120,7 @@
                                 <span class="input-group-addon" id="basic-addon2">
                                     <span class="glyphicon glyphicon-envelope"></span>
                                 </span>
-                                    <input type="text" name="nome_contato" placeholder="Digite seu E-mail" aria-describedby="basic-addon2" class="form-control" required>
+                                    <input type="text" name="email_contato" placeholder="Digite seu E-mail" aria-describedby="basic-addon2" class="form-control" required>
                             </span>
                         </p>
 
@@ -129,7 +129,7 @@
                                 <span class="input-group-addon" id="basic-addon3">
                                     <span class="glyphicon glyphicon-pencil"></span>
                                 </span>
-                                    <textarea type="text" name="nome_contato" cols="30" rows="5" placeholder="Digite seu Comentário" aria-describedby="basic-addon3" class="form-control" required> </textarea></span> 
+                                    <textarea type="text" name="msg_contato" cols="30" rows="5" placeholder="Digite seu Comentário" aria-describedby="basic-addon3" class="form-control" required> </textarea></span> 
                             </span>
                         </p>
                         
