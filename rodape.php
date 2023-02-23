@@ -1,5 +1,10 @@
 <?php 
     require 'mailer/PHPMailerAutoload.php';
+
+    require 'path/to/PHPMailer/src/Exception.php';
+    require 'path/to/PHPMailer/src/PHPMailer.php';
+    require 'path/to/PHPMailer/src/SMTP.php';
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
