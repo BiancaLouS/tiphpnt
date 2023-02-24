@@ -5,7 +5,8 @@
 
     require 'vendor/autoload.php';
 
-    $mail = new PHPMailer(true);
+    if (isset($_POST['enviar'])) {
+        $mail = new PHPMailer(true);
 
     try {
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;                          
@@ -13,7 +14,7 @@
         $mail->Host       = 'smtp.gmail.com';                     
         $mail->SMTPAuth   = true;                                   
         $mail->Username   = 'biancalourencosilva@gmail.com';                     
-        $mail->Password   = 'mfsyipcjnvmqgngt';                               
+        $mail->Password   = 'uwdecmgselcbgbeb';                               
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
         $mail->Port       = 587;                 
         
@@ -24,19 +25,26 @@
                                           
         $mail->Subject = 'Mensagem Subject Bianca';
         $body = "This is the HTML message body <b>in bold!</b>
-            nome: $_POST['nome_contato']<br>
-            E-mail: $_POST['email_contato']<br>
+        
+            nome: $_POST[nome_contato]<br>
+            E-mail: $_POST[email_contato]<br>
             Mensagem:<br> 
-            $_POST['msg_contato']<br>";
+           
+            $_POST[msg_contato]<br> 
+            
+            ";
 
         $mail->Body = $body;
 
         $mail->send();
         echo 'E-mail Enviado!';
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        echo "E-mail não enviado: {$mail->ErrorInfo}";
     }
     
+}else{
+    echo "Erro ao enviar e-mail.";
+}
     
 ?>
 
