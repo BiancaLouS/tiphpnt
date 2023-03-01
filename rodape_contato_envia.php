@@ -1,52 +1,48 @@
-<?php 
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
+<?php
 
-    require 'vendor/autoload.php';
+    $nome = $_POST['nome_contato'];
+    $email = $_POST['email_contato'];
+    $comentario = $_POST['msg_contato'];
 
-    if (isset($_POST['enviar'])) {
-        $mail = new PHPMailer(true);
+    require 'PHPMailer/PHPMailerAutoload.php';
 
-    try {
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                          
-        $mail->isSMTP();                                            
-        $mail->Host       = 'smtp..com';                     
-        $mail->SMTPAuth   = 'true';                                   
-        $mail->Username   = 'biancalourencosilva1@outlook.com';                     
-        $mail->Password   = 'Bia09nca@';                               
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;                 
-        
-        $mail->setFrom('biancalourencosilva@gmail.com', 'Mailer');
-        $mail->addAddress('');     
-        $mail->addReplyTo('biancalourencosilva@gmail.com', 'Information');
-        $mail->isHTML(true);
-                                          
-        $mail->Subject = 'Mensagem Subject Bianca';
-        $body = "This is the HTML message body <b>in bold!</b>
-        
-            $nome: $_POST[nome_contato]<br>
-            $Email: $_POST[email_contato]<br>
-            $Mensagem:<br> 
-           
-            $_POST[msg_contato]<br> 
-            
-            ";
+    $mail = new PHPMailer();
+    $mail->isSMTP();
 
-        $mail->Body = $body;
+    // Configurações do servidor de email
+    $mail->Host = 'smtp.office365.com';
+    $mail->Port = '587';
+    $mail->SMTPSecure = 'STARTTLS';
+    $mail->SMTPAuth = 'true';
+    $mail->Username = 'SuporteChuletaquente@outlook.com';
+    $mail->Password = 'chuletaQu3nt3@Churr4sc0';
 
-        $mail->send();
-        echo 'E-mail Enviado!';
-    } catch (Exception $e) {
-        echo "E-mail não enviado: {$mail->ErrorInfo}";
+    // Configuração de mensagem
+    $mail->setFrom($mail->Username, "Seu Nome"); // remetente(sistema)
+    $mail->addAddress($mail->Username);                
+
+    $mail->Subject = "Seu comentário foi encaminhado para superiores. Muito Obrigado.";
+
+    $conteudo_email = "
+    Voce recebeu uma mensagem de $nome ($email):
+    <br>
+    Mensagem: <br>
+    $comentario
+    ";
+    $mail->IsHTML(true);
+    $mail->Body = $conteudo_email;
+
+    if ($mail->send())
+    {
+        echo "E-mail enviado com sucesso!";
     }
-    
-}else{
-    echo "Erro ao enviar e-mail.";
-}
-    
+    else
+    {
+        echo "Falha ao enviar o e-mail " . $mail->ErrorInfo;
+    }
 ?>
+    
+
 
 <!DOCTYPE html>
 <html lang="pt_BR">
