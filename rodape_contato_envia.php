@@ -18,10 +18,10 @@
     $mail->Password = 'chuletaQu3nt3@Churr4sc0';
 
     // Configuração de mensagem
-    $mail->setFrom($mail->Username, "Seu Nome"); // remetente(sistema)
+    $mail->setFrom($mail->Username, "Alerta Chuleta Quente"); // remetente(sistema)
     $mail->addAddress($mail->Username);                
 
-    $mail->Subject = "Seu comentário foi encaminhado para superiores. Muito Obrigado.";
+    $mail->Subject = "Seu comentario foi encaminhado para superiores. Muito Obrigado.";
 
     $conteudo_email = "
     Voce recebeu uma mensagem de $nome ($email):
@@ -40,6 +40,11 @@
     {
         echo "Falha ao enviar o e-mail " . $mail->ErrorInfo;
     }
+
+    if($mail->send()){
+        header('location: index.php');
+    }
+
 ?>
     
 

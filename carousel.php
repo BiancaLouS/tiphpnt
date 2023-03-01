@@ -11,9 +11,13 @@
             <li data-target="#banners" data-slide-to="0" class="active"></li>
             <li data-target="#banners" data-slide-to="1"></li>
             <li data-target="#banners" data-slide-to="2"></li>
+            <li data-target="#banners" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner thumbnail" role="listbox">
-            <div class="item active">
+        <div class="item active">
+                <img src="images/desconto.jpg" alt="Churrascaria" class="center-block">
+            </div>
+            <div class="item">
                 <img src="images/churrascaria.jpg" alt="Churrascaria" class="center-block">
             </div>
             <div class="item ">
