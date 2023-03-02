@@ -123,3 +123,39 @@ insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_prod
 insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_produto, valor_produto, imagem_produto, destaque_produto) values ('16', '3', 'Guaraná (Lata)', 'Clássico guaraná lata com opções de tomar com larança ou sem perfeito para aquele churrasco', '29.90', 'refrigerante.jpg', 'Sim');
 
 insert into tbprodutos (id_produto, id_tipo_produto, descri_produto, resumo_produto, valor_produto, imagem_produto, destaque_produto) values ('17', '3', 'Chopp', 'Um Chopp para distrair... acompanhamento perfeito para comer os destaques da casa.', '29.90', 'chopp.webp', 'Sim');
+
+alter table tbusuarios add email varchar(40);
+alter table tbusuarios add cpf varchar(14);
+
+CREATE TABLE pedidoReserva(
+id int not null auto_increment,
+dataAtual datetime not null,
+dataFinal datetime not null,
+nome varchar(100) not null,
+motivo_negativa varchar(100) null,
+email varchar(40) not null,
+cpf varchar(14) not null,
+acompanhantes int not null,
+id_status int not null,
+constraint pk_pedReserva PRIMARY KEY(id),
+constraint fk_pStatus FOREIGN KEY(id) references stats(id));
+
+CREATE TABLE mesa(
+id int null auto_increment,
+constraint pk_mesa PRIMARY KEY(id),
+constraint fk_mStatus FOREIGN KEY(id) references stats(id));
+
+CREATE TABLE stats(
+id int null auto_increment,
+stats bit,
+constraint pk_stats PRIMARY KEY(id));
+
+CREATE TABLE reserva(
+id int null auto_increment,
+id_status int null,
+id_mesa int null,
+id_pReserva int null,
+constraint pk_reserva PRIMARY KEY(id),
+constraint fk_rstatus FOREIGN KEY(id) references stats(id),
+constraint fk_rmesa FOREIGN KEY(id) references mesa(id),
+constraint fk_rpReserva FOREIGN KEY(id) references pedidoReserva(id));

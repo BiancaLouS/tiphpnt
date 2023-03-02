@@ -43,7 +43,7 @@ $rows_tipos = $lista_tipos->fetch_all();
 
         <div class="collapse navbar-collapse" id="menupublico">      
 
-        <button type="button" class="btn btn-danger active" style="margin-left: 480px; margin-top: 10px; margin-bottom: 0px;" data-toggle="modal" data-target="#myModal">Faça sua Reserva! </button>
+        <button type="button" class="btn btn-danger active" style="margin-left: 480px; margin-top: 10px; margin-bottom: 0px;" data-toggle="modal" data-target="#myModal1">Faça sua Reserva! </button>
 
                 <ul class="nav navbar-nav navbar-right">
                     
@@ -112,30 +112,74 @@ $rows_tipos = $lista_tipos->fetch_all();
 
 
 <!-- The Modal -->
-<div class="modal" id="myModal" style="z-index: 9999;">
+<div class="modal fade" id="myModal1">
     <div class="modal-dialog" >
         <div class="modal-content" >
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Regras da Promoção</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="text-align: center;">
+                    <strong>Regras da Promoção</strong> <br>
+                    Qualquer regra que não for seguida resultará em pedido de reserva negado.
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                A solicitação da reserva deve ocorrer com 48 horas de antecedência; <br>
-                A promoção é válida somente em 90 dias.
+                
+                <strong>
+                    A solicitação da reserva deve ocorrer com 48 horas de antecedência; <br>
+                    A promoção é válida somente em 90 dias; <br>
+                    A promoção é válida 1x por CPF; <br>
+                    Todo os dados devem ser preenchidos.
+                </strong>
+
+                
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="submit" class="btn btn-danger">Enviar Pedido de Reserva</button>
+                <button class="btn btn-danger" data-target="#myModal2" data-toggle="modal">Prosseguir</button>
             </div>
 
         </div>
     </div>
 </div>   
+
+<div class="modal fade" id="myModal2" >
+    <div class="modal-dialog" >
+        <div class="modal-content" >
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" style="text-align: center;">
+                    <strong>Informe Seus dados!</strong> <br>
+                Informe seus dados para cadastro de conta e pedido de reserva.
+                </h4>
+                <button type="button" class="close"  data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+            <strong>
+               Formulário
+            </strong>
+
+                
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+               <button type="submit" class="btn btn-danger" data-toggle="modal">Enviar Pedio de Rerserva</button>
+            </div>
+
+        </div>
+    </div>
+</div>   
+
+
 
     
 
