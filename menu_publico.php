@@ -41,39 +41,9 @@ $rows_tipos = $lista_tipos->fetch_all();
             
             <!-- nav direita  -->
 
-        <div class="collapse navbar-collapse" id="menupublico">
+        <div class="collapse navbar-collapse" id="menupublico">      
 
-            <button type="button" class="btn btn-danger active" style="margin-left: 480px; margin-top: 10px; margin-bottom: 0px;" data-toggle="modal" data-target="#myModal">Faça sua Reserva! </button>
-
-              <!-- The Modal -->
-              <div class="modal" id="myModal">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-
-                          <!-- Modal Header -->
-                          <div class="modal-header">
-                              <h4 class="modal-title">Regras da Promoção</h4>
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          </div>
-
-                          <!-- Modal body -->
-                          <div class="modal-body">
-                              A solicitação da reserva deve ocorrer com 48 horas de antecedência; <br>
-                              A promoção é válida somente em 90 dias.
-                          </div>
-
-                          <!-- Modal footer -->
-                          <div class="modal-footer">
-                              <button type="submit" class="btn btn-danger">Enviar Pedido de Reserva</button>
-                          </div>
-
-                      </div>
-                  </div>
-              </div>   
-
-
-                    
-      
+        <button type="button" class="btn btn-danger active" style="margin-left: 480px; margin-top: 10px; margin-bottom: 0px;" data-toggle="modal" data-target="#myModal">Faça sua Reserva! </button>
 
                 <ul class="nav navbar-nav navbar-right">
                     
@@ -139,6 +109,33 @@ $rows_tipos = $lista_tipos->fetch_all();
 
         </div>
     </nav>
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal" style="z-index: 9999;">
+    <div class="modal-dialog" >
+        <div class="modal-content" >
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Regras da Promoção</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                A solicitação da reserva deve ocorrer com 48 horas de antecedência; <br>
+                A promoção é válida somente em 90 dias.
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-danger">Enviar Pedido de Reserva</button>
+            </div>
+
+        </div>
+    </div>
+</div>   
 
     
 
