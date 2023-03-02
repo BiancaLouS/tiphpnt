@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/png">
    
     <title>Busca por Tipo</title>
 </head>

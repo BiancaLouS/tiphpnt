@@ -13,6 +13,8 @@ $rows_tipos = $lista_tipos->fetch_all();
 
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+
     <title>Menu Público</title>
 </head>
 <body class="fundofixo">
@@ -43,7 +45,7 @@ $rows_tipos = $lista_tipos->fetch_all();
 
         <div class="collapse navbar-collapse" id="menupublico">      
 
-        <button type="button" class="btn btn-danger active" style="margin-left: 480px; margin-top: 10px; margin-bottom: 0px;" data-toggle="modal" data-target="#myModal1">Faça sua Reserva! </button>
+        <button type="button" class="btn btn-danger active" style="margin-left: 480px; margin-top: 10px; margin-bottom: 0px;" data-toggle="modal" data-target="#meuModal">Faça sua Reserva! </button>
 
                 <ul class="nav navbar-nav navbar-right">
                     
@@ -112,7 +114,7 @@ $rows_tipos = $lista_tipos->fetch_all();
 
 
         <!-- The Modal -->
-        <div class="modal fade" id="myModal1">
+        <div class="modal fade" id="meuModal">
             <div class="modal-dialog" >
                 <div class="modal-content" >
 

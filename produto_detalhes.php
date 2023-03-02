@@ -12,6 +12,7 @@ $row_detalhe = $produto_detalhe->fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/png">
     <title>Detalhes</title>
 </head>
 <body class="fundofixo">
@@ -52,7 +53,7 @@ $row_detalhe = $produto_detalhe->fetch_assoc();
                             <button class="btn btn-default disabled" role="button" style="cursor: default;">
                                 <?php echo "R$ ".number_format($row_detalhe['valor_produto'], 2, ',', '.');?>    
                             </button>
-                            
+
                          <a href="pedir_reserva.php">   
                             <button type="button" class="btn btn-danger ">Reserve sua Mesa!</button>
                         </a>

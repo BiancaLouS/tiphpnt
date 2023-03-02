@@ -35,8 +35,9 @@
         
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/estilo2.css">
+        <link rel="shortcut icon" href="./images/logo.png" type="image/png">
 
-        <title>Usuários Insere</title>
+        <title>Faça sua Reserva!</title>
     </head>
 
     <body class="fundofixo">
@@ -57,15 +58,15 @@
                     <div class="thumbnail">
                         <div class="alert alert-danger" role="alert">
                             
-                            <form action="usuarios_insere.php" method="post" name="form_usuarios_insere" enctype="multipart/form-data" id="form_usuarios_insere">
+                            <form action="pedir_reserva.php" method="post" name="form_reserva" enctype="multipart/form-data" id="form_reserva">
                                         
-                                <label for="dataAtual">Login:</label>
+                                <label for="dataAtual">Nome Completo:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                         </span>
-                                        <input type="text" name="dataAtual" id="dataAtual"
-                                                class="form-control" placeholder="Digite o Login"
+                                        <input type="text" name="nome" id="nome"
+                                                class="form-control" placeholder="Digite seu nome completo"
                                                 maxlength="100" required>
                                     </div>     
 
@@ -89,19 +90,35 @@
                                                 maxlength="100" required>
                                     </div>
 
-                                <label for="dataFinal">Senha:</label>
+                                    <label for="acompanhantes">Quantidade de acompanhantes:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                                            <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                                         </span>
-                                        <input type="text" name="dataFinal" id="dataFinal"
-                                                class="form-control" placeholder="Crie uma Senha"
-                                                maxlength="100" required>
-                                    </div>   
+                                        <input type="number" name="acompanhantes" id="acompanhantes"
+                                                class="form-control" placeholder="Digite a quantidade de acompanhantes"
+                                                required required min="0" step="1">
+                                    </div>
+
+                                    <label for="dataAtual">Informe a data da Reserva:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+                                        </span>
+                                        <input type="date" name="dataAtual" id="dataAtual"
+                                                class="form-control" placeholder="Digite a data da Reserva">
+                                    </div>
+
+                                    <hr>
+
+                                    <img src="images/churrascaria.jpg" class="img-fluid img-thumbnail rounded-start" alt="Churrascaria" style="margin-top: 5px;">
 
                                     <br>
                                     <hr>
                                     <input type="submit" id="enviar" name="enviar" class="btn btn-danger btn-block" value="Cadastrar Novo Usuário">
+
+                                    
+
                             </form>
                         </div>
                     </div>
@@ -111,3 +128,38 @@
 
     </body>
 </html>
+
+<script type="text/javascript">
+
+        function mask(o,f){
+        v_obj=o
+        v_fun=f
+        setTimeout("execmask()",1)
+        }
+
+        function execmask(){
+        v_obj.value=v_fun(v_obj.value)
+        }
+
+        function maskcpf(v){ 
+        v=v.replace(/\D/g,"");
+        v=v.replace(/(\d{3})(\d)/,"$1.$2");
+        v=v.replace(/(\d{3})(\d)/,"$1.$2");
+        v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+        return v;
+        }
+
+        function idcss( el ){
+            return document.getElementById( el );
+        }
+
+        window.onload = function(){
+
+            //CPF ---------
+            idcss('cpf').setAttribute('maxlength', 14);
+            idcss('cpf').onkeypress = function(){
+                mask( this, maskcpf );
+            }
+            //-------------
+        }
+</script>
