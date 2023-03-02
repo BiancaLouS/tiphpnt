@@ -140,7 +140,9 @@ $rows_tipos = $lista_tipos->fetch_all();
 
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button class="btn btn-danger" data-target="#myModal2" data-toggle="modal">Prosseguir</button>
+                        <a href="pedir_reserva.php">
+                            <button class="btn btn-danger" data-toggle="modal">Prosseguir</button>
+                        </a>
                     </div>
 
                 </div>

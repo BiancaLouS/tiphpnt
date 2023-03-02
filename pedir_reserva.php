@@ -1,6 +1,5 @@
 <?php 
-    include 'acesso_com.php';
-    include '../conn/connect.php';
+    include "conn/connect.php";
     
     if($_POST){
         
@@ -41,7 +40,7 @@
     </head>
 
     <body class="fundofixo">
-        <?php include "menu_adm.php";?>
+        <?php include "menu_publico.php";?>
         <main class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-8">

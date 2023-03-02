@@ -52,8 +52,13 @@ $row_detalhe = $produto_detalhe->fetch_assoc();
                             <button class="btn btn-default disabled" role="button" style="cursor: default;">
                                 <?php echo "R$ ".number_format($row_detalhe['valor_produto'], 2, ',', '.');?>    
                             </button>
-                        <button type="button" class="btn btn-danger ">Reserve sua Mesa!</button>
+                            
+                         <a href="pedir_reserva.php">   
+                            <button type="button" class="btn btn-danger ">Reserve sua Mesa!</button>
+                        </a>
+
                         </div>
+
                         <!-- modal pagamentos -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
