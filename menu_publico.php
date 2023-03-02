@@ -111,77 +111,42 @@ $rows_tipos = $lista_tipos->fetch_all();
     </nav>
 
 
-<!-- The Modal -->
-<div class="modal fade" id="myModal1">
-    <div class="modal-dialog" >
-        <div class="modal-content" >
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal1">
+            <div class="modal-dialog" >
+                <div class="modal-content" >
 
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title" style="text-align: center;">
-                    <strong>Regras da Promoção</strong> <br>
-                    Qualquer regra que não for seguida resultará em pedido de reserva negado.
-                </h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="text-align: center;">
+                            <strong>Regras da Promoção</strong> <br>
+                            Qualquer regra que não for seguida resultará em pedido de reserva negado.
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        
+                        <strong>
+                            A solicitação da reserva deve ocorrer com 48 horas de antecedência; <br>
+                            A promoção é válida somente em 90 dias; <br>
+                            A promoção é válida 1x por CPF; <br>
+                            Todo os dados devem ser preenchidos.
+                        </strong>
+
+                        
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-target="#myModal2" data-toggle="modal">Prosseguir</button>
+                    </div>
+
+                </div>
             </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-                
-                <strong>
-                    A solicitação da reserva deve ocorrer com 48 horas de antecedência; <br>
-                    A promoção é válida somente em 90 dias; <br>
-                    A promoção é válida 1x por CPF; <br>
-                    Todo os dados devem ser preenchidos.
-                </strong>
-
-                
-            </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button class="btn btn-danger" data-target="#myModal2" data-toggle="modal">Prosseguir</button>
-            </div>
-
-        </div>
-    </div>
-</div>   
-
-<div class="modal fade" id="myModal2" >
-    <div class="modal-dialog" >
-        <div class="modal-content" >
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title" style="text-align: center;">
-                    <strong>Informe Seus dados!</strong> <br>
-                Informe seus dados para cadastro de conta e pedido de reserva.
-                </h4>
-                <button type="button" class="close"  data-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-                
-            <strong>
-               Formulário
-            </strong>
-
-                
-            </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-               <button type="submit" class="btn btn-danger" data-toggle="modal">Enviar Pedio de Rerserva</button>
-            </div>
-
-        </div>
-    </div>
-</div>   
-
-
-
-    
+        </div>   
+        
 
 </body>
 </html>
